@@ -43,3 +43,13 @@ Accept: application/json
 {
     "book_id": 1
 }
+
+### Kembali Buku
+POST http://localhost:8000/api/return
+Authorization: Bearer 7|D616e3fROMt6IEoQxcsuDmAEa7FH1qIAoTMF1ZhC3baadf7c
+Content-Type: application/json
+Accept: application/json
+
+{
+    "transaction_id": 2
+}
