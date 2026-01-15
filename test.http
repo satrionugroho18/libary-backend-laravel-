@@ -7,3 +7,20 @@ Accept: application/json
     "email": "admin@mail.com",
     "password": "password"
 }
+
+### Get All Books
+GET http://localhost:8000/api/books
+Authorization: Bearer 6|7fNR5Ct9xMTW3OZfIGmzM5iTTzFft6zIpFqL34WBe6317d7f
+Accept: application/json
+
+### Add New Book
+POST http://localhost:8000/api/books
+Authorization: Bearer 6|7fNR5Ct9xMTW3OZfIGmzM5iTTzFft6zIpFqL34WBe6317d7f
+Content-Type: application/json
+Accept: application/json
+
+{
+    "judul": "Filosofi Teras",
+    "penulis": "Henry Manampiring",
+    "stok": 12
+}
