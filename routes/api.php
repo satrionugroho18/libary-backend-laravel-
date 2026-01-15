@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -17,4 +18,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('books', BookController::class);
     Route::post('/logout', [AuthController::class, 'logout']);
 });
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('books', BookController::class);
+    Route::post('/borrow', [TransactionController::class, 'borrow']);
+    Route::post('/return', [TransactionController::class, 'returnBook']);
+    Route::post('/logout', [AuthController::class, 'logout']);
+});
+
 });
